@@ -11,7 +11,7 @@ using Soenneker.Utils.HttpClientCache.Abstract;
 
 namespace Soenneker.Close.HttpClients;
 
-///<inheritdoc cref="ICloseOpenApiHttpClient"/>
+/// <inheritdoc cref="ICloseOpenApiHttpClient"/>
 public sealed class CloseOpenApiHttpClient : ICloseOpenApiHttpClient
 {
     private readonly IHttpClientCache _httpClientCache;
