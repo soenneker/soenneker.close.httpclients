@@ -31,7 +31,7 @@ public sealed class CloseOpenApiHttpClient : ICloseOpenApiHttpClient
     {
         return _httpClientCache.Get(_httpClientCacheKey, (config: _config, baseUrl: _config["Close:ClientBaseUrl"] ?? _prodBaseUrl), static state =>
         {
-            var apiKey = state.config.GetValueStrict<string>("Close:ApiKey");
+            var apiKey = state.config.GetStringStrict("Close:ApiKey");
             string authHeaderName = state.config["Close:AuthHeaderName"] ?? "Authorization";
             string? authHeaderValueTemplate = state.config["Close:AuthHeaderValueTemplate"];
             string authHeaderValue = authHeaderValueTemplate is null
